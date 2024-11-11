@@ -8,8 +8,6 @@ const gradientBox = document.getElementById('gradient-box');
 const cssCode = document.getElementById('css-code');
 const copyButton = document.getElementById('copy-button');
 const directionSelect = document.getElementById('direction');
-<<<<<<< HEAD
-=======
 const presetSelect = document.getElementById('preset-colors');  // Seleção de conjunto de cores predefinidos
 
 // Função para aplicar o conjunto de cores predefinido
@@ -42,7 +40,6 @@ function applyPreset(preset) {
     // Atualizar o gradiente sempre que um preset for aplicado
     updateGradient();
 }
->>>>>>> v3.0
 
 // Função para atualizar o gradiente
 function updateGradient() {
@@ -50,12 +47,6 @@ function updateGradient() {
     const color2 = color2Input.value;
     const color3 = color3Input.value;
     const percentage = slider.value;
-<<<<<<< HEAD
-    const direction = directionSelect.value;  // Pega o valor da direção selecionada
-
-    // Atualizando a visualização do gradiente com base nas cores, valor do slider e direção
-    const gradient = `linear-gradient(${direction}, ${color1} ${percentage}%, ${color2} ${percentage}%, ${color3})`;
-=======
     const direction = directionSelect.value;
 
     // Calculando os pontos de transição para as três cores
@@ -65,7 +56,6 @@ function updateGradient() {
 
     // Atualizando a visualização do gradiente com base nas cores, valor do slider e direção
     const gradient = `linear-gradient(${direction}, ${color1} ${color1Stop}, ${color2} ${color2Stop}, ${color3} ${color3Stop})`;
->>>>>>> v3.0
 
     // Definindo o fundo do box com o gradiente gerado
     gradientBox.style.background = gradient;
@@ -88,8 +78,6 @@ color3Input.addEventListener('input', updateGradient);
 // Atualizando o gradiente quando o usuário escolhe a direção
 directionSelect.addEventListener('change', updateGradient);
 
-<<<<<<< HEAD
-=======
 // Atualizando o gradiente quando o usuário escolhe um conjunto de cores predefinido
 presetSelect.addEventListener('change', (e) => {
     const selectedPreset = e.target.value;
@@ -98,7 +86,6 @@ presetSelect.addEventListener('change', (e) => {
     }
 });
 
->>>>>>> v3.0
 // Função para copiar o código CSS para a área de transferência
 function copyCSSCode() {
     const textarea = document.createElement('textarea');
