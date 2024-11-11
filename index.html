@@ -10,6 +10,18 @@
     <div class="container">
         <h1>Gerador de Gradiente</h1>
         
+        <!-- Novo campo para selecionar um conjunto de cores predefinidas -->
+        <div class="preset-container">
+            <label for="preset-colors">Escolha um Conjunto de Cores:</label>
+            <select id="preset-colors">
+                <option value="none">Selecione um conjunto...</option>
+                <option value="sunset">Por do Sol</option>
+                <option value="ocean">Oceano</option>
+                <option value="forest">Floresta</option>
+                <option value="retro">Retro</option>
+            </select>
+        </div>
+
         <div class="color-selection">
             <label for="color1">Cor 1:</label>
             <input type="color" id="color1" value="#ff0000">
@@ -27,7 +39,7 @@
             <span id="slider-value">50%</span>
         </div>
 
-        <!-- Novo campo para escolher a direção do gradiente -->
+        <!-- Seleção de direção do gradiente -->
         <div class="direction-container">
             <label for="direction">Direção do Gradiente:</label>
             <select id="direction">

@@ -29,6 +29,15 @@ h1 {
     margin-bottom: 20px;
 }
 
+.preset-container {
+    margin-bottom: 20px;
+}
+
+.preset-container label {
+    display: block;
+    margin-bottom: 5px;
+}
+
 .color-selection {
     display: flex;
     justify-content: space-between;
