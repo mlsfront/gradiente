@@ -5,6 +5,8 @@ const color3Input = document.getElementById('color3');
 const slider = document.getElementById('slider');
 const sliderValue = document.getElementById('slider-value');
 const gradientBox = document.getElementById('gradient-box');
+const cssCode = document.getElementById('css-code');
+const copyButton = document.getElementById('copy-button');
 
 // Função para atualizar o gradiente
 function updateGradient() {
@@ -16,7 +18,11 @@ function updateGradient() {
     // Atualizando a visualização do gradiente com base nas cores e no valor do slider
     const gradient = `linear-gradient(to right, ${color1} ${percentage}%, ${color2} ${percentage}%, ${color3})`;
 
+    // Definindo o fundo do box com o gradiente gerado
     gradientBox.style.background = gradient;
+
+    // Atualizando o código CSS exibido
+    cssCode.textContent = `background: ${gradient};`;
 }
 
 // Atualizando o valor do slider em tempo real
@@ -29,6 +35,20 @@ slider.addEventListener('input', (e) => {
 color1Input.addEventListener('input', updateGradient);
 color2Input.addEventListener('input', updateGradient);
 color3Input.addEventListener('input', updateGradient);
+
+// Função para copiar o código CSS para a área de transferência
+function copyCSSCode() {
+    const textarea = document.createElement('textarea');
+    textarea.value = cssCode.textContent;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand('copy');
+    document.body.removeChild(textarea);
+    alert('Código CSS copiado para a área de transferência!');
+}
+
+// Adicionando o evento de click para o botão de copiar
+copyButton.addEventListener('click', copyCSSCode);
 
 // Inicializa a visualização
 updateGradient();
