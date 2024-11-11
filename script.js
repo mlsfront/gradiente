@@ -7,6 +7,7 @@ const sliderValue = document.getElementById('slider-value');
 const gradientBox = document.getElementById('gradient-box');
 const cssCode = document.getElementById('css-code');
 const copyButton = document.getElementById('copy-button');
+const directionSelect = document.getElementById('direction');  // Novo seletor de direção
 
 // Função para atualizar o gradiente
 function updateGradient() {
@@ -14,14 +15,15 @@ function updateGradient() {
     const color2 = color2Input.value;
     const color3 = color3Input.value;
     const percentage = slider.value;
+    const direction = directionSelect.value;  // Pega a direção selecionada pelo usuário
 
     // Calculando os pontos de transição para as três cores
-    const color1Stop = percentage + '%'; // A primeira cor começa do início e vai até a porcentagem
-    const color2Stop = (100 - percentage * 2) + '%'; // A segunda cor ocupa o meio
-    const color3Stop = '100%'; // A terceira cor vai até o final
+    const color1Stop = percentage + '%';  // A primeira cor começa do início e vai até a porcentagem
+    const color2Stop = (100 - percentage * 2) + '%';  // A segunda cor ocupa o meio
+    const color3Stop = '100%';  // A terceira cor vai até o final
 
-    // Atualizando a visualização do gradiente com base nas cores e no valor do slider
-    const gradient = `linear-gradient(to right, ${color1} ${color1Stop}, ${color2} ${color2Stop}, ${color3} ${color3Stop})`;
+    // Atualizando a visualização do gradiente com base nas cores, valor do slider e direção
+    const gradient = `linear-gradient(${direction}, ${color1} ${color1Stop}, ${color2} ${color2Stop}, ${color3} ${color3Stop})`;
 
     // Definindo o fundo do box com o gradiente gerado
     gradientBox.style.background = gradient;
@@ -40,6 +42,9 @@ slider.addEventListener('input', (e) => {
 color1Input.addEventListener('input', updateGradient);
 color2Input.addEventListener('input', updateGradient);
 color3Input.addEventListener('input', updateGradient);
+
+// Atualizando o gradiente quando o usuário escolhe a direção
+directionSelect.addEventListener('change', updateGradient);
 
 // Função para copiar o código CSS para a área de transferência
 function copyCSSCode() {
