@@ -1,24 +1,24 @@
-# Gerador de Gradiente CSS
+# Gerador de Gradiente CSS Interativo
 
-Este é um simples gerador de gradientes CSS interativo. A aplicação permite que o usuário crie gradientes personalizados, escolhendo até 3 cores e ajustando as proporções do gradiente com um controle deslizante (slider). O código CSS do gradiente gerado pode ser copiado diretamente com o clique de um botão.
+Esta aplicação permite criar gradientes CSS personalizados utilizando três cores selecionadas pelo usuário. O usuário pode ajustar a proporção do gradiente em tempo real através de um controle deslizante. Além disso, o código CSS gerado é exibido e pode ser copiado facilmente.
 
 ## Funcionalidades
 
-- Selecione até 3 cores usando os campos de entrada do tipo `color`.
-- Ajuste a proporção do gradiente com o controle deslizante (slider).
+- Selecione até 3 cores personalizadas usando os campos de entrada do tipo `color`.
+- Ajuste a distribuição do gradiente com o controle deslizante.
 - Visualize o gradiente gerado em tempo real.
-- Copie o código CSS gerado com um simples clique no botão.
+- Copie o código CSS gerado com um simples clique em um botão.
 
 ## Como Usar
 
-1. **Seleção de Cores**: Escolha as três cores desejadas para o seu gradiente.
-2. **Ajuste do Gradiente**: Use o controle deslizante para ajustar a proporção de mistura entre as cores no gradiente.
-3. **Visualização**: O gradiente gerado será exibido em tempo real na área de visualização.
-4. **Copiar Código CSS**: Clique no botão "Copiar Código CSS" para copiar o código gerado para a área de transferência. O código pode ser usado diretamente em seu CSS.
+1. **Seleção de Cores**: O usuário pode escolher até 3 cores diferentes para o gradiente.
+2. **Ajuste do Gradiente**: O controle deslizante permite alterar a proporção de mistura das cores no gradiente.
+3. **Visualização**: O gradiente gerado será mostrado na área de visualização.
+4. **Copiar Código CSS**: Clique no botão "Copiar Código CSS" para copiar o código CSS do gradiente gerado.
 
 ## Estrutura do Projeto
 
-A estrutura do projeto é a seguinte:
+A estrutura do projeto permanece como segue:
 
 ```
 /gerador-gradiente
@@ -30,27 +30,28 @@ A estrutura do projeto é a seguinte:
 
 ### Descrição dos Arquivos
 
-- `index.html`: O arquivo principal da aplicação com a estrutura HTML.
-- `styles.css`: O arquivo de estilo responsável pela aparência da página.
-- `script.js`: O arquivo JavaScript que controla a lógica da aplicação, incluindo a atualização do gradiente e a funcionalidade de cópia do código CSS.
+- `index.html`: Contém a estrutura HTML da página, incluindo os controles de cores e o controle deslizante.
+- `styles.css`: Responsável pelo design e layout da interface.
+- `script.js`: Contém a lógica de geração do gradiente, atualização em tempo real e cópia do código CSS.
 
 ### Como Rodar o Projeto
 
 1. Clone ou baixe o repositório.
-2. Abra o arquivo `index.html` em seu navegador preferido.
-3. Acesse a interface e comece a criar seu gradiente!
+2. Abra o arquivo `index.html` em seu navegador para visualizar e interagir com a aplicação.
+3. Crie seus gradientes e copie o código CSS gerado.
 
 ## Exemplo de Código CSS Gerado
 
-Aqui está um exemplo do código CSS que pode ser gerado pela aplicação:
+Após selecionar as cores e ajustar o controle deslizante, um exemplo do código CSS gerado pode ser:
 
 ```css
-background: linear-gradient(to right, #ff0000 50%, #00ff00 50%, #0000ff 100%);
+background: linear-gradient(to right, #ff0000 33%, #00ff00 66%, #0000ff 100%);
 ```
+
+Este código CSS pode ser copiado facilmente para o seu projeto com o clique do botão.
 
 ## Tecnologias Utilizadas
 
 - **HTML**: Para a estrutura da página.
-- **CSS**: Para o estilo e layout da página.
-- **JavaScript**: Para manipular os eventos e a lógica do gradiente.
-
+- **CSS**: Para o estilo da página e a apresentação do gradiente.
+- **JavaScript**: Para controlar os eventos e atualizar o gradiente em tempo real.
