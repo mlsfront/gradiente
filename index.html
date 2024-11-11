@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Gradiente</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gerador de Gradiente</h1>
+        
+        <div class="color-selection">
+            <label for="color1">Cor 1:</label>
+            <input type="color" id="color1" value="#ff0000">
+            
+            <label for="color2">Cor 2:</label>
+            <input type="color" id="color2" value="#00ff00">
+            
+            <label for="color3">Cor 3:</label>
+            <input type="color" id="color3" value="#0000ff">
+        </div>
+        
+        <div class="slider-container">
+            <label for="slider">Ajustar o Gradiente (porcentagem):</label>
+            <input type="range" id="slider" min="0" max="100" value="50">
+            <span id="slider-value">50%</span>
+        </div>
+        
+        <div class="gradient-preview">
+            <h2>Visualização do Gradiente</h2>
+            <div id="gradient-box"></div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
