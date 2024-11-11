@@ -26,7 +26,20 @@
             <input type="range" id="slider" min="0" max="100" value="50">
             <span id="slider-value">50%</span>
         </div>
-        
+
+        <!-- Novo campo para escolher a direção do gradiente -->
+        <div class="direction-container">
+            <label for="direction">Direção do Gradiente:</label>
+            <select id="direction">
+                <option value="to right">Direita (right)</option>
+                <option value="to left">Esquerda (left)</option>
+                <option value="to top">Cima (top)</option>
+                <option value="to bottom">Baixo (bottom)</option>
+                <option value="45deg">45°</option>
+                <option value="90deg">90°</option>
+            </select>
+        </div>
+
         <div class="gradient-preview">
             <h2>Visualização do Gradiente</h2>
             <div id="gradient-box"></div>

@@ -47,6 +47,15 @@ h1 {
     width: 80%;
 }
 
+.direction-container {
+    margin-bottom: 20px;
+}
+
+#direction {
+    padding: 5px;
+    width: 100%;
+}
+
 .gradient-preview {
     margin-top: 20px;
 }
